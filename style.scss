@@ -1,0 +1,39 @@
+@import "_mixin";
+@import "_variables";
+@import "_status-bar";
+@import "_navbar";
+@import "_story-tray";
+@import "_user-header";
+@import "_post";
+@import "_post-info";
+@import "_bottom-nav";
+@import "_home-indicator";
+
+* {
+  @include layout-reset();
+}
+
+body {
+  display: grid;
+  place-content: center;
+  width: 100vw;
+
+  background: linear-gradient(
+    139.44deg,
+    #d9d9d9 0%,
+    #7300e4 0.01%,
+    #e300a4 48.46%,
+    #ffb763 100%
+  );
+}
+
+.wrapper {
+  height: $page-height;
+  width: $page-width;
+  background-color: var(--color-white);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 1.044rem;
+  color: var(--color-black);
+}

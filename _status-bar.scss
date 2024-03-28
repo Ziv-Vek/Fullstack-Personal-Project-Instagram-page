@@ -1,0 +1,36 @@
+@import "_variables";
+@import "_mixin";
+
+.status-bar {
+  @include flex-sides();
+  height: 47px;
+
+  &__clock {
+    @include set-font(600, 1.063rem, $default-font-color);
+    margin-left: 27px;
+  }
+
+  &__phone-stats-container {
+    margin-right: 26.6px;
+  }
+
+  &__phone-stat {
+    margin-left: 7px;
+
+    &--larger-margin {
+      margin-left: 8px;
+    }
+  }
+
+  .img-signal {
+    width: 18px;
+  }
+  .img-wifi {
+    width: 17px;
+  }
+
+  .img-battery {
+    width: 27.4px;
+    height: 13px;
+  }
+}

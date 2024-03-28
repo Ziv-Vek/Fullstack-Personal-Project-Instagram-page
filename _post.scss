@@ -1,0 +1,39 @@
+@import "_mixin";
+@import "_variables";
+
+.post {
+  width: 100%;
+  height: 391px;
+  position: relative;
+
+  &__main-img {
+    width: auto;
+    height: 100%;
+  }
+
+  &__info-icon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 356px;
+    left: 16px;
+  }
+
+  &__post-number-container {
+    position: absolute;
+    top: 16px;
+    left: 344px;
+    @include single-grid-center();
+
+    background-color: var(--color-black-60);
+    border-radius: 12px;
+    width: 30px;
+    height: 22px;
+  }
+
+  &__post-number {
+    position: absolute;
+    display: inline-block;
+    @include set-font(400, 0.75rem, var(--color-white));
+  }
+}

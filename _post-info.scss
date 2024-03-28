@@ -1,0 +1,100 @@
+@import "_mixin";
+@import "_variables";
+
+.post-info {
+  width: 100%;
+  height: auto;
+
+  &__cta {
+    width: 100%;
+    background-color: var(--color-blue);
+
+    &__container {
+      @include flex-sides();
+      @include default-padding;
+      height: 40px;
+      background-color: var(--color-blue);
+    }
+
+    &__cta-text {
+      display: inline-block;
+      @include set-font(700, 0.875rem, var(--color-white));
+    }
+
+    &__cta__approve-arrow {
+      height: 9.9px;
+    }
+  }
+
+  &__actions-bar {
+    @include default-padding();
+
+    &__container {
+      max-width: calc($page-width - ($default-sides-padding * 2));
+      padding: 0 auto;
+      height: 44px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-content: center;
+    }
+
+    &__actions-container {
+      padding: 0 auto;
+      margin: 0;
+      justify-self: start;
+      @include flex-sides();
+    }
+
+    &__action-icon {
+      height: 24px;
+      margin-right: 12px;
+    }
+
+    &__carousel-container {
+      @include flex-sides();
+      padding: 0 auto;
+      justify-self: center;
+    }
+
+    &__bullet {
+      margin-right: 6px;
+      width: 8px;
+
+      &--small {
+        margin-right: 6px;
+        width: 5px;
+      }
+
+      &--x-small {
+        width: 3px;
+      }
+    }
+
+    &__save-container {
+      width: 24px;
+      justify-self: end;
+      &__save-icon {
+        height: 22px;
+      }
+    }
+  }
+
+  &__description-container {
+    @include default-padding();
+
+    &__likes-text {
+      @include set-font(700, 0.813rem, $default-font-color);
+      margin-bottom: 6px;
+    }
+
+    &__desc-text {
+      @include set-font(400, 0.875rem, $default-font-color);
+      overflow: hidden;
+
+      &--bold {
+        font-weight: 700;
+      }
+    }
+  }
+}

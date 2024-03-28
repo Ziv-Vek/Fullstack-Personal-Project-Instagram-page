@@ -1,0 +1,23 @@
+// Root - colors:
+:root {
+  --color-white: #fff;
+  --color-white-500: #ffffff80; // alpha 0.5
+  --color-black: #000;
+  --color-black-10: rgba(0, 0, 0, 0.1); // alpha 0.1
+  --color-black-50: rgba(0, 0, 0, 0.5); // alpha 0.5
+  --color-black-60: rgba(0, 0, 0, 0.6); // alpha 0.6
+  --color-blue: #1fa1ff;
+  --color-red: #fe0135;
+  --color-grey: #6e6e6e;
+  --color-grey-500: #6e6e6e80; // alpha 0.5
+  --color-grey-100: #6e6e6e1a; // alpha 0.1
+}
+
+// Variables:
+$default-sides-padding: 14px;
+$default-font-color: var(--color-black);
+$default-font-weight: 700;
+$default-font-size: 0.9rem;
+$default-bg-color: var(--color-white);
+$page-width: 390px;
+$page-height: 850.75px;

@@ -1,0 +1,39 @@
+@import "_variables";
+
+@mixin layout-reset() {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin flex-sides() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-vertical() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin unique-padding($left-pad, $right-pad) {
+  padding: 0 $right-pad 0 $left-pad;
+}
+
+@mixin default-padding() {
+  padding: 0 $default-sides-padding;
+}
+
+@mixin set-font($weight, $size, $color) {
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+}
+
+@mixin single-grid-center {
+  display: grid;
+  place-items: center;
+}

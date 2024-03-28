@@ -1,0 +1,41 @@
+@import "_mixin";
+@import "_variables";
+
+.bottom-nav {
+  $icon-size: 24px;
+
+  &__h-line {
+    border-color: var(--color-black-10);
+    border-style: solid;
+    border-width: 1px 0 0 0;
+    position: relative;
+    top: -2px;
+  }
+  &__container {
+    width: $page-width;
+    height: 56px;
+    @include default-padding();
+    @include flex-sides();
+  }
+
+  &__icon {
+    width: $icon-size;
+
+    &--rounded {
+      width: $icon-size;
+      border-radius: 50%;
+      margin-bottom: 4px;
+    }
+
+    &--small {
+      width: 4px;
+      border-radius: 50%;
+    }
+  }
+
+  &__user-container {
+    @include flex-vertical();
+    width: $icon-size;
+    margin: 4px 0 0;
+  }
+}

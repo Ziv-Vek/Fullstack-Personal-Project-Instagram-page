@@ -1,0 +1,30 @@
+@import "_mixin";
+@import "_variables";
+
+.user-header {
+  &__container {
+    @include default-padding;
+    @include flex-sides;
+    height: 50px;
+    position: relative;
+  }
+
+  &__profile-container {
+    @include flex-sides;
+  }
+
+  &__profile-img {
+    width: 32.43px;
+    border-radius: 50%;
+    margin-right: 9.68px;
+  }
+
+  &__profile-name {
+    @include set-font(700, 0.75rem, $default-font-color);
+    display: inline-block;
+  }
+
+  &__menu-icon {
+    width: 24px;
+  }
+}

@@ -1,0 +1,39 @@
+@import "_variables";
+@import "_mixin";
+
+$icons-margin-left: 22.5px;
+
+.navbar {
+  height: 40px;
+  @include flex-sides();
+  @include default-padding();
+
+  &__icons-group {
+    @include flex-sides();
+  }
+
+  &__icons-group-left {
+    @include flex-sides();
+    width: 128px;
+    height: 30px;
+    position: relative;
+  }
+
+  &__logo {
+    width: 104px;
+    height: 30px;
+  }
+
+  &__arrow {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__icon {
+    width: 24px;
+    margin-left: 24px;
+  }
+}

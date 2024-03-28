@@ -1,0 +1,77 @@
+@import "_mixin";
+@import "_variables";
+
+.story-tray {
+  @include flex-sides();
+  @include unique-padding($default-sides-padding, 0);
+  height: 105.75px;
+  gap: 12px;
+
+  box-shadow: 0 1px 2px var(--color-grey-500);
+
+  &__story-container {
+    @include flex-vertical();
+    height: auto;
+  }
+
+  &__story-img-wrapper {
+    @include single-grid-center();
+    max-width: 72px;
+    max-height: 72px;
+    position: relative;
+    background: linear-gradient(
+      238.74deg,
+      #c913b9 -2.57%,
+      #f9373f 44.58%,
+      #fecd00 91.55%
+    );
+    padding: 3px;
+    border-radius: 50%;
+
+    &--no-ring {
+      @include single-grid-center();
+      max-width: 72px;
+      max-height: 72px;
+      position: relative;
+      padding: 3px;
+      border-radius: 50%;
+    }
+  }
+
+  &__story-img {
+    border-radius: 50%;
+    width: 63.63px;
+    height: 63.63px;
+    border: 3px solid $default-bg-color;
+
+    &--half-rounded {
+      height: 72px;
+    }
+  }
+
+  &__story-name {
+    @include set-font(400, 0.7rem, $default-font-color);
+    line-height: 22px;
+    text-align: right;
+
+    &--greyed {
+      @include set-font(400, 0.7rem, var(--color-black-50));
+    }
+  }
+
+  &__blue-plus-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    @include single-grid-center();
+  }
+
+  &__plus-circle {
+    position: absolute;
+    width: 20px;
+    bottom: 6px;
+    right: 6px;
+  }
+}
